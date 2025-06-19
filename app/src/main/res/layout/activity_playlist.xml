@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.example.musicplaylistmanager.PlaylistActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Playlist Management"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/etPlaylistName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="New Playlist Name"
+        android:inputType="text"/>
+
+    <Button
+        android:id="@+id/btnCreatePlaylist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Playlist"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btnAddToPlaylist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Songs to Playlist"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btnViewPlaylists"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View All Playlists"
+        android:layout_marginTop="8dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/tvPlaylistOutput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Playlist information will appear here"
+            android:textSize="16sp"/>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>

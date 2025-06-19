@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MusicPlaylistManager"
+        tools:targetApi="31">
+
+        <!-- Main Activity -->
+        <activity
+            android:name="com.example.musicplaylistmanager.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Playlist Activity -->
+        <activity
+            android:name="com.example.musicplaylistmanager.PlaylistActivity"
+            android:exported="false"
+            android:label="Manage Playlists"
+            android:parentActivityName="com.example.musicplaylistmanager.MainActivity"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <!-- Add to Playlist Activity -->
+        <activity
+            android:name="com.example.musicplaylistmanager.AddToPlaylistActivity"
+            android:exported="false"
+            android:label="Add to Playlist"
+            android:parentActivityName="com.example.musicplaylistmanager.PlaylistActivity"
+            android:windowSoftInputMode="adjustPan"/>
+
+        <!-- View Songs Activity -->
+        <activity
+            android:name="com.example.musicplaylistmanager.ViewSongsActivity"
+            android:exported="false"
+            android:label="View Songs"
+            android:parentActivityName="com.example.musicplaylistmanager.MainActivity"
+            android:windowSoftInputMode="adjustPan"/>
+    </application>
+
+</manifest>
